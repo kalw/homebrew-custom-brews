@@ -2,7 +2,7 @@ class Qdrant < Formula
   desc "qdrant server"
   @@os="XXX"
   @@arch="XXX"
-
+  version "1.15.5"
   on_macos do
     @@os="osx"
     if Hardware::CPU.arm?
@@ -17,8 +17,9 @@ class Qdrant < Formula
       sha256 "b25f5512f2b696bae84752ff50752a77eec2ce6955e00847816e05c6344d6af9"
     end
   end
+  
   homepage "https://github.com/qdrant/qdrant"
-  version "1.15.5"
+  
   
 
   def install
