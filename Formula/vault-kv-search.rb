@@ -1,9 +1,9 @@
 class VaultKvSearch < Formula
   desc "vault-kv-search command line utiliy"
   homepage "https://github.com/xbglowx/vault-kv-search/releases"
-  version "0.1.1"
-  url "https://github.com/xbglowx/vault-kv-search/releases/download/v#{version}/vault-kv-search-#{version}.darwin-amd64.tar.gz"
-  sha256 "b79c87377bcd62ce7ba40f481f86fb5ab09bd32129bd743963559d32e81e2fea"
+  version "0.4.4"
+  url "https://github.com/xbglowx/vault-kv-search/releases/download/v#{version}/vault-kv-search-darwin-amd64"
+  sha256 "0ba5e81e1a4dd8fd41d7f9370307c7e143099d516c9ebd5feedf26ac4f0ea323"
 
   def install
     bin.mkpath

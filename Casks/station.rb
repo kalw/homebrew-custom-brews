@@ -1,9 +1,9 @@
 cask "station" do
-  version "v2.0.9"
-  sha256 "a9831b0f9d698cfecd69a1c52b01e63f00b850fbec6766e2f2f760e5b53ee55d"
+  version "v3.3.0"
+  sha256 "3e3b4373414b97cdd1c8420028d6a5903a8ecab2a019a20cfb5fe986f4b21487"
 
   # github.com/getstation/desktop-app-releases/ was verified as official when first introduced to the cask
-  url "https://github.com/getstation/desktop-app/releases/download/#{version}/Station.dmg"
+  url "https://github.com/getstation/desktop-app/releases/download/#{version}/Station.zip"
   appcast "https://github.com/getstation/desktop-app/releases.atom"
   name "Station"
   desc "Browser that organizes all your web applications"
@@ -11,7 +11,7 @@ cask "station" do
 
   auto_updates true
 
-  app "Station.app"
+  app "Station.app", target: "Station.app"
 
   uninstall quit: [
     "org.efounders.BrowserX",

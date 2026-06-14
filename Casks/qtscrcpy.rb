@@ -1,8 +1,9 @@
 cask 'qtscrcpy' do
-    version 'v1.4.5'
-    sha256 'a4971dad010306f7b5e5031de343d2b69fd005c6ee44654c3ea929fd1c6995b8'
+    version 'v3.3.3'
+    sha256 '2ed9e53285ba5504c55891e4cf0a6d74d6d2240cecfd04b2e53d09088277e252'
     
-    url "https://github.com/barry-ran/QtScrcpy/releases/download/#{version}/QtScrcpy-mac-x64-#{version}.dmg"
+    # asset name includes Qt version (e.g. Qt5.15.2) which may change; verify on update
+    url "https://github.com/barry-ran/QtScrcpy/releases/download/#{version}/QtScrcpy-mac-x64-Qt5.15.2-#{version}.dmg"
     name 'qtscrcpy'
     homepage 'https://github.com/barry-ran/QtScrcpy/'
   
