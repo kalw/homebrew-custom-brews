@@ -47,6 +47,12 @@ CUSTOM_CHECKERS = {
         "pattern": r"Atlassian Companion (\d+\.\d+\.\d+)",
         # URL in the formula is literal (no #{version}) so sha-only download applies
     },
+    # KDE Connect: build number scraped from the CDN directory listing
+    "kde-connect.rb": {
+        "type": "html-version",
+        "page_url": "https://origin.cdn.kde.org/ci-builds/network/kdeconnect-kde/master/macos-arm64/",
+        "pattern": r"kdeconnect-kde-master-(\d+)-macos-clang-arm64\.dmg",
+    },
 }
 
 
@@ -372,8 +378,9 @@ def process_html_version(rb_file: Path, checker: dict) -> bool:
 
     sha_map = {}
     for url_tmpl, old_sha in pairs:
-        # URL should be literal here (no #{version}), but resolve just in case
-        resolved = resolve_url(url_tmpl, ver)
+        # Resolve #{version} with the new version (for versioned URLs like kde-connect)
+        # or the current version (for literal URLs like atlassian-companion)
+        resolved = resolve_url(url_tmpl, new_ver)
         new_sha = sha256_of_url(resolved)
         if new_sha is None:
             print(f"  {rb_file.name}: download failed, aborting")
