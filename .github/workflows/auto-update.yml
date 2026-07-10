@@ -51,8 +51,10 @@ jobs:
               --title "chore: auto-update formula versions and SHA256 hashes" \
               --body-file /tmp/pr_body.md)
             echo "PR created: $PR_URL"
-            gh pr merge --merge --auto "$PR_URL"
+            gh pr merge --merge --auto "$PR_URL" \
+              || echo "::warning::Failed to enable auto-merge for $PR_URL (is 'Allow auto-merge' enabled in repo settings?)"
           else
             echo "PR #$EXISTING already exists for $BRANCH, skipping."
-            gh pr merge --merge --auto "$EXISTING"
+            gh pr merge --merge --auto "$EXISTING" \
+              || echo "::warning::Failed to enable auto-merge for PR #$EXISTING (is 'Allow auto-merge' enabled in repo settings?)"
           fi
