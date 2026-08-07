@@ -2,19 +2,19 @@ class Qdrant < Formula
   desc "qdrant server"
   @@os="XXX"
   @@arch="XXX"
-  version "1.18.3"
+  version "1.19.0"
   on_macos do
     @@os="osx"
     if Hardware::CPU.arm?
       @@arch="arm64"
       url "https://github.com/qdrant/qdrant/releases/download/v#{version}/qdrant-aarch64-apple-darwin.tar.gz"
-      sha256 "0cb040a261035c316779bd7b4cca2e6ab39faf62640d6918bbbe320e2a9a6547"
+      sha256 "4e279a80cc1ebe73e859318ff86375af54c123887dd7ae46605c0eb6cb7c44e8"
     end
 
     if Hardware::CPU.intel?
       @@arch="x86_64"
       url "https://github.com/qdrant/qdrant/releases/download/v#{version}/qdrant-x86_64-apple-darwin.tar.gz"
-      sha256 "45bdd4642e7f25611e9cd74f9f91482b27c5376840cd8dc476da67b87abe25a6"
+      sha256 "e7afefcc125856157b33c6184c00ddee3f1d5b112474649070592d9fdd9a3f54"
     end
   end
   
