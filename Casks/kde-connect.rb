@@ -1,14 +1,14 @@
 cask 'kde-connect' do
-  version '6542'
+  version '6583'
 
   on_arm do
     url "https://origin.cdn.kde.org/ci-builds/network/kdeconnect-kde/master/macos-arm64/kdeconnect-kde-master-#{version}-macos-clang-arm64.dmg"
-    sha256 '4e944929d97172c88ad841201991e8dfb229b14ee5a42642723e1a2d00c23e35'
+    sha256 'aa17a6cd005e03e4f10bc927ca2d8144a3cb3144883bcda0b8935e257ee7611b'
   end
 
   on_intel do
     url "https://origin.cdn.kde.org/ci-builds/network/kdeconnect-kde/master/macos-x86_64/kdeconnect-kde-master-#{version}-macos-clang-x86_64.dmg"
-    sha256 '7655dd67585ec346bf86426ecd8c428367313d1d4c92f59d396f9bf30b8ab7c3'
+    sha256 '74206a485d3e2d44aca7902ce944bea9c830129305ccebbb6e7e060ed90ee16b'
   end
 
   name 'KDE Connect'
