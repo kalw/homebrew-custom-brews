@@ -1,8 +1,8 @@
 cask 'cypress-desktop' do
 
-    version "16.1.0"
+    version "16.1.1"
     url "https://cdn.cypress.io/desktop/#{version}/darwin-x64/cypress.zip"
-    sha256 '912dd5cf5fafab6d2099db1119790b9705110279648f2a3fb32305df1f48d8e5'
+    sha256 'ddf047c516846e624558cd8d778dcfc3968abc86b3184948fe74b074344c1da3'
     name 'Cypress desktop'
     homepage "https://www.cypress.io/"
 
